@@ -3,7 +3,7 @@
 A private, browser-based Claude workspace. The Anthropic API key is used only by a Netlify serverless function and is never shipped to the browser.
 
 ## Features
-- Private password gate
+- Open access (no sign-in required)
 - Claude model selector
 - Conversation history stored in the browser's local storage
 - PDF, text, Markdown, CSV, JSON, and image attachments
@@ -30,7 +30,7 @@ A private, browser-based Claude workspace. The Anthropic API key is used only by
 ### C. Add secrets in Netlify
 Open your site → **Site configuration → Environment variables** and add:
 - `ANTHROPIC_API_KEY` = your NEW Anthropic API key
-- `APP_PASSWORD` = a strong password only you know
+
 
 Then trigger a new deploy so the function receives the variables.
 
