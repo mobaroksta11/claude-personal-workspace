@@ -1,6 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 
-const MODELS = new Set(["claude-sonnet-4-5", "claude-opus-4-5", "claude-haiku-4-5"]);
+const MODELS = new Set(["claude-sonnet-4-6", "claude-opus-4-5", "claude-haiku-4-5"]);
 const json = (body, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json" } });
 
@@ -28,7 +28,7 @@ export default async (req) => {
   content.push({ type: "text", text: message });
 
   const request = {
-    model: MODELS.has(model) ? model : "claude-sonnet-4-5",
+    model: MODELS.has(model) ? model : "claude-sonnet-4-6",
     max_tokens: 4096,
     messages: [{ role: "user", content }],
   };

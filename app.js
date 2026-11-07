@@ -1,6 +1,6 @@
 const $=id=>document.getElementById(id);
-const MODEL_NAMES={"claude-sonnet-4-5":"Sonnet 4.5","claude-opus-4-5":"Opus 4.5","claude-haiku-4-5":"Haiku 4.5"};
-const RATES={"claude-sonnet-4-5":[3,15],"claude-opus-4-5":[5,25],"claude-haiku-4-5":[1,5]};
+const MODEL_NAMES={"claude-sonnet-4-6":"Sonnet 4.6","claude-opus-4-5":"Opus 4.5","claude-haiku-4-5":"Haiku 4.5"};
+const RATES={"claude-sonnet-4-6":[3,15],"claude-opus-4-5":[5,25],"claude-haiku-4-5":[1,5]};
 let chats=JSON.parse(localStorage.getItem("cw_chats")||"[]"),active=null,lastAnswer="",usage=JSON.parse(localStorage.getItem("cw_usage")||"[]");
 function save(){localStorage.setItem("cw_chats",JSON.stringify(chats));localStorage.setItem("cw_usage",JSON.stringify(usage))}
 function newId(){return Date.now().toString(36)+Math.random().toString(36).slice(2,7)}
